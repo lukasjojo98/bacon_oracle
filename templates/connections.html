@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="connection-container">
+    <div class="button-container">
+        <p>{{ actor_name }} has a Bacon number of {{ bacon_number }}</p>
+        <button id="link-finder">Find a different link</button>
+        <input type="hidden" id="actor_name" value="{{ actor_name }}">
+    </div>
+    {% for connection in connections %}
+        <div class="{% if connection == 'was in' or connection == 'with' %}arrow-item{% else %}connection-item{% endif %}">
+            <p>{{ connection }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

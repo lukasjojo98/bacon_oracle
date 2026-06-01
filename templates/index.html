@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form class="search-form" method="post" action="/links">
+    <div class="search-row">
+        <input class="search-input" type="text" name="from_actor" placeholder="Kevin Bacon" />
+        <p class="search-separator">to</p>
+        <input class="search-input" type="text" name="to_actor" placeholder="To actor" />
+        <button class="search-button" type="submit">Find link</button>
+    </div>
+</form>
+{% endblock %}
